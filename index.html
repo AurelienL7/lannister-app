@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div class="l-header">
+        <div class="d-flex align-items-center">
+          <img src="img/logo.png" class="img-fluid logo mb-2" alt="logo">
+          <p class="text-white font-italic catchline">" A Lannister always pays his debts "</p>
+        </div>
+
+        <div class="l-login">
+          <a href="#" class="font-weight-bold text-dark username" data-toggle="modal" data-target="#modal-cersei"><div class="avatar cersei"></div></a>
+          <button class="btn btn-warning d-flex align-items-center"  data-toggle="modal" data-target="#modal-add-people">
+            <svg class="mr-2 bi bi-person-plus-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 100-6 3 3 0 000 6zm7.5-3a.5.5 0 01.5.5v2a.5.5 0 01-.5.5h-2a.5.5 0 010-1H13V5.5a.5.5 0 01.5-.5z" clip-rule="evenodd"/>
+              <path fill-rule="evenodd" d="M13 7.5a.5.5 0 01.5-.5h2a.5.5 0 010 1H14v1.5a.5.5 0 01-1 0v-2z" clip-rule="evenodd"/>
+            </svg>
+            add
+          </button>
+        </div>
+
+      </div>
+
+      <div class="l-expenses-head">
+        <h2>Mes pots communs</h2>
+        <button class="btn btn-secondary btn-add-expense" data-toggle="modal" data-target="#modal-add-expense">Ajouter un pot commun</button>
+      </div>
+
+      <ul class="list-group mt-3 mb-5">
+
+        
+        <li class="list-group-item expense-item">
+          <div class="user-info">
+            <a href="expense.html" class="font-weight-bold text-dark username">Une nouvelle armure</a>
+            <p class="expense-date text-muted font-weight-light">18/03/20</p>
+          </div>
+          
+          <div class="l-expense-info">
+            <p class="expense-amount">350€</p>
+            <div class="l-expense-edit">
+              <a href="#" class="btn-edit-expense" data-toggle="modal" data-target="#modal-edit-expense">
+                <svg class="bi bi-pencil" width="1.25em" height="1.25em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M11.293 1.293a1 1 0 011.414 0l2 2a1 1 0 010 1.414l-9 9a1 1 0 01-.39.242l-3 1a1 1 0 01-1.266-1.265l1-3a1 1 0 01.242-.391l9-9zM12 2l2 2-9 9-3 1 1-3 9-9z" clip-rule="evenodd"/>
+                  <path fill-rule="evenodd" d="M12.146 6.354l-2.5-2.5.708-.708 2.5 2.5-.707.708zM3 10v.5a.5.5 0 00.5.5H4v.5a.5.5 0 00.5.5H5v.5a.5.5 0 00.5.5H6v-1.5a.5.5 0 00-.5-.5H5v-.5a.5.5 0 00-.5-.5H3z" clip-rule="evenodd"/>
+                </svg>
+              </a>
+              <a href="#" class="text-danger btn-delete-expense">
+                <svg class="bi bi-trash" width="1.25em" height="1.25em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 5.5A.5.5 0 016 6v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm2.5 0a.5.5 0 01.5.5v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm3 .5a.5.5 0 00-1 0v6a.5.5 0 001 0V6z"/>
+                  <path fill-rule="evenodd" d="M14.5 3a1 1 0 01-1 1H13v9a2 2 0 01-2 2H5a2 2 0 01-2-2V4h-.5a1 1 0 01-1-1V2a1 1 0 011-1H6a1 1 0 011-1h2a1 1 0 011 1h3.5a1 1 0 011 1v1zM4.118 4L4 4.059V13a1 1 0 001 1h6a1 1 0 001-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" clip-rule="evenodd"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </li>
+
+        <li class="list-group-item expense-item">
+          <div class="user-info">
+            <a href="expense.html" class="font-weight-bold text-dark username">Courses janvier</a>
+            <p class="expense-date text-muted font-weight-light">18/03/20</p>
+          </div>
+          
+          <div class="l-expense-info">
+            <p class="expense-amount">643€</p>
+            <div class="l-expense-edit">
+              <a href="#" class="btn-edit-expense" data-toggle="modal" data-target="#modal-edit-expense">
+                <svg class="bi bi-pencil" width="1.25em" height="1.25em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M11.293 1.293a1 1 0 011.414 0l2 2a1 1 0 010 1.414l-9 9a1 1 0 01-.39.242l-3 1a1 1 0 01-1.266-1.265l1-3a1 1 0 01.242-.391l9-9zM12 2l2 2-9 9-3 1 1-3 9-9z" clip-rule="evenodd"/>
+                  <path fill-rule="evenodd" d="M12.146 6.354l-2.5-2.5.708-.708 2.5 2.5-.707.708zM3 10v.5a.5.5 0 00.5.5H4v.5a.5.5 0 00.5.5H5v.5a.5.5 0 00.5.5H6v-1.5a.5.5 0 00-.5-.5H5v-.5a.5.5 0 00-.5-.5H3z" clip-rule="evenodd"/>
+                </svg>
+              </a>
+              <a href="#" class="text-danger btn-delete-expense">
+                <svg class="bi bi-trash" width="1.25em" height="1.25em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 5.5A.5.5 0 016 6v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm2.5 0a.5.5 0 01.5.5v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm3 .5a.5.5 0 00-1 0v6a.5.5 0 001 0V6z"/>
+                  <path fill-rule="evenodd" d="M14.5 3a1 1 0 01-1 1H13v9a2 2 0 01-2 2H5a2 2 0 01-2-2V4h-.5a1 1 0 01-1-1V2a1 1 0 011-1H6a1 1 0 011-1h2a1 1 0 011 1h3.5a1 1 0 011 1v1zM4.118 4L4 4.059V13a1 1 0 001 1h6a1 1 0 001-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" clip-rule="evenodd"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </li>
+
+        <li class="list-group-item expense-item">
+          <div class="user-info">
+            <a href="expense.html" class="font-weight-bold text-dark username">Apéro chez Jaime</a>
+            <p class="expense-date text-muted font-weight-light">18/03/20</p>
+          </div>
+          
+          <div class="l-expense-info">
+            <p class="expense-amount">38€</p>
+            <div class="l-expense-edit">
+              <a href="#" class="btn-edit-expense" data-toggle="modal" data-target="#modal-edit-expense">
+                <svg class="bi bi-pencil" width="1.25em" height="1.25em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M11.293 1.293a1 1 0 011.414 0l2 2a1 1 0 010 1.414l-9 9a1 1 0 01-.39.242l-3 1a1 1 0 01-1.266-1.265l1-3a1 1 0 01.242-.391l9-9zM12 2l2 2-9 9-3 1 1-3 9-9z" clip-rule="evenodd"/>
+                  <path fill-rule="evenodd" d="M12.146 6.354l-2.5-2.5.708-.708 2.5 2.5-.707.708zM3 10v.5a.5.5 0 00.5.5H4v.5a.5.5 0 00.5.5H5v.5a.5.5 0 00.5.5H6v-1.5a.5.5 0 00-.5-.5H5v-.5a.5.5 0 00-.5-.5H3z" clip-rule="evenodd"/>
+                </svg>
+              </a>
+              <a href="#" class="text-danger btn-delete-expense">
+                <svg class="bi bi-trash" width="1.25em" height="1.25em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 5.5A.5.5 0 016 6v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm2.5 0a.5.5 0 01.5.5v6a.5.5 0 01-1 0V6a.5.5 0 01.5-.5zm3 .5a.5.5 0 00-1 0v6a.5.5 0 001 0V6z"/>
+                  <path fill-rule="evenodd" d="M14.5 3a1 1 0 01-1 1H13v9a2 2 0 01-2 2H5a2 2 0 01-2-2V4h-.5a1 1 0 01-1-1V2a1 1 0 011-1H6a1 1 0 011-1h2a1 1 0 011 1h3.5a1 1 0 011 1v1zM4.118 4L4 4.059V13a1 1 0 001 1h6a1 1 0 001-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" clip-rule="evenodd"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </li>
+      
+      </ul>
+
+      
+
+      <footer>Made with ❤</footer>
+
+    </div>
+
+
+
+<!-- Modal Add People -->
+<div class="modal fade" id="modal-add-people" tabindex="-1" role="dialog" aria-labelledby="modal-add-people-title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal-add-people-title">Ajouter une personne</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <div class="avatar mb-3"></div>
+            <label for="exampleFormControlFile1">Avatar</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Pseudo</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tywin">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Email</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="tywinlannister@gmail.com">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Tel</label>
+            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="06 25 65 45 12">
+          </div>
+          
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+        <button type="button" class="btn btn-primary">Valider</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Edit Expense -->
+<div class="modal fade" id="modal-edit-expense" tabindex="-1" role="dialog" aria-labelledby="modal-add-expense-title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal-add-expense-title">Modifier le pot commun</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Titre du pot commun</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Apéro chez jaime">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Montant du pot commun</label>
+            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="152€">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Date de la dépense</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="22/04/2020">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Auteur de la dépense</label>
+            <select multiple class="form-control" id="exampleFormControlSelect1">
+              <option>Jaime</option>
+              <option>Tywin</option>
+              <option>Tyrion</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+        <button type="button" class="btn btn-primary">Valider</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Personnelle -->
+<div class="modal fade" id="modal-cersei" tabindex="-1" role="dialog" aria-labelledby="modal-add-people-title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header d-flex align-items-center">
+        <div class="avatar cersei"></div>
+        <h5 class="modal-title" id="modal-add-people-title">Cersei</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <h5>Transactions :</h5>
+          <p><strong>17</strong> transactions pour un total de <strong>255€</strong></p>
+
+          <h5>Dernières dépenses :</h5>
+          <ul class="list-group mt-3 mb-5">
+
+            <li class="list-group-item expense-item">
+              <div class="l-user-infos">
+                <div class="user-info">
+                  <p class="expense-date text-muted font-weight-light">18/03/20</p>
+                </div>
+              </div>
+    
+              <p class="expense-name">Des bières.</p>
+              
+              <div class="l-expense-info">
+                <p class="expense-amount">-1000.00€</p>
+              </div>
+            </li>
+
+            <li class="list-group-item expense-item">
+              <div class="l-user-infos">
+                <div class="user-info">
+                  <p class="expense-date text-muted font-weight-light">18/03/20</p>
+                </div>
+              </div>
+    
+              <p class="expense-name">Des bières.</p>
+              
+              <div class="l-expense-info">
+                <p class="expense-amount">-1000.00€</p>
+              </div>
+            </li>
+
+            <li class="list-group-item expense-item">
+              <div class="l-user-infos">
+                <div class="user-info">
+                  <p class="expense-date text-muted font-weight-light">18/03/20</p>
+                </div>
+              </div>
+    
+              <p class="expense-name">Des bières.</p>
+              
+              <div class="l-expense-info">
+                <p class="expense-amount">-1000.00€</p>
+              </div>
+            </li>
+
+            <li class="list-group-item expense-item">
+              <div class="l-user-infos">
+                <div class="user-info">
+                  <p class="expense-date text-muted font-weight-light">18/03/20</p>
+                </div>
+              </div>
+    
+              <p class="expense-name">Des bières.</p>
+              
+              <div class="l-expense-info">
+                <p class="expense-amount">-1000.00€</p>
+              </div>
+            </li>
+
+            <li class="list-group-item expense-item">
+              <div class="l-user-infos">
+                <div class="user-info">
+                  <p class="expense-date text-muted font-weight-light">18/03/20</p>
+                </div>
+              </div>
+    
+              <p class="expense-name">Des bières.</p>
+              
+              <div class="l-expense-info">
+                <p class="expense-amount">-1000.00€</p>
+              </div>
+            </li>
+
+            <li class="list-group-item expense-item">
+              <div class="l-user-infos">
+                <div class="user-info">
+                  <p class="expense-date text-muted font-weight-light">18/03/20</p>
+                </div>
+              </div>
+    
+              <p class="expense-name">Des bières.</p>
+              
+              <div class="l-expense-info">
+                <p class="expense-amount">-1000.00€</p>
+              </div>
+            </li>
+
+            <li class="list-group-item expense-item">
+              <div class="l-user-infos">
+                <div class="user-info">
+                  <p class="expense-date text-muted font-weight-light">18/03/20</p>
+                </div>
+              </div>
+    
+              <p class="expense-name">Des bières.</p>
+              
+              <div class="l-expense-info">
+                <p class="expense-amount">-1000.00€</p>
+              </div>
+            </li>
+
+            <li class="list-group-item expense-item">
+              <div class="l-user-infos">
+                <div class="user-info">
+                  <p class="expense-date text-muted font-weight-light">18/03/20</p>
+                </div>
+              </div>
+    
+              <p class="expense-name">Des bières.</p>
+              
+              <div class="l-expense-info">
+                <p class="expense-amount">-1000.00€</p>
+              </div>
+            </li>
+
+            <li class="list-group-item expense-item">
+              <div class="l-user-infos">
+                <div class="user-info">
+                  <p class="expense-date text-muted font-weight-light">18/03/20</p>
+                </div>
+              </div>
+    
+              <p class="expense-name">Des bières.</p>
+              
+              <div class="l-expense-info">
+                <p class="expense-amount">-1000.00€</p>
+              </div>
+            </li>
+
+            <li class="list-group-item expense-item">
+              <div class="l-user-infos">
+                <div class="user-info">
+                  <p class="expense-date text-muted font-weight-light">18/03/20</p>
+                </div>
+              </div>
+    
+              <p class="expense-name">Des bières.</p>
+              
+              <div class="l-expense-info">
+                <p class="expense-amount">-1000.00€</p>
+              </div>
+            </li>
+
+            <li class="list-group-item expense-item">
+              <div class="l-user-infos">
+                <div class="user-info">
+                  <p class="expense-date text-muted font-weight-light">18/03/20</p>
+                </div>
+              </div>
+    
+              <p class="expense-name">Des bières.</p>
+              
+              <div class="l-expense-info">
+                <p class="expense-amount">-1000.00€</p>
+              </div>
+            </li>
+
+            <li class="list-group-item expense-item">
+              <div class="l-user-infos">
+                <div class="user-info">
+                  <p class="expense-date text-muted font-weight-light">18/03/20</p>
+                </div>
+              </div>
+    
+              <p class="expense-name">Des bières.</p>
+              
+              <div class="l-expense-info">
+                <p class="expense-amount">-1000.00€</p>
+              </div>
+            </li>
+
+            <li class="list-group-item expense-item">
+              <div class="l-user-infos">
+                <div class="user-info">
+                  <p class="expense-date text-muted font-weight-light">18/03/20</p>
+                </div>
+              </div>
+    
+              <p class="expense-name">Des bières.</p>
+              
+              <div class="l-expense-info">
+                <p class="expense-amount">-1000.00€</p>
+              </div>
+            </li>
+
+            <li class="list-group-item expense-item">
+              <div class="l-user-infos">
+                <div class="user-info">
+                  <p class="expense-date text-muted font-weight-light">18/03/20</p>
+                </div>
+              </div>
+    
+              <p class="expense-name">Des bières.</p>
+              
+              <div class="l-expense-info">
+                <p class="expense-amount">-1000.00€</p>
+              </div>
+            </li>
+
+            <li class="list-group-item expense-item">
+              <div class="l-user-infos">
+                <div class="user-info">
+                  <p class="expense-date text-muted font-weight-light">18/03/20</p>
+                </div>
+              </div>
+    
+              <p class="expense-name">Des bières.</p>
+              
+              <div class="l-expense-info">
+                <p class="expense-amount">-1000.00€</p>
+              </div>
+            </li>
+
+            <li class="list-group-item expense-item">
+              <div class="l-user-infos">
+                <div class="user-info">
+                  <p class="expense-date text-muted font-weight-light">18/03/20</p>
+                </div>
+              </div>
+    
+              <p class="expense-name">Des bières.</p>
+              
+              <div class="l-expense-info">
+                <p class="expense-amount">-1000.00€</p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

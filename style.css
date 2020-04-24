@@ -1,0 +1,294 @@
+/**
+ * CONTENTS
+ *
+ * Based on SMACSS :)
+ *
+ * TOOLS
+ * Mixins...............Useful mixins.
+ *
+ * NORMALIZE / RESET
+ * Normalize.css........A level playing field.
+ *
+ * BASE
+ * HTML tags.............H1–H6 styles, main, body...
+ *
+ * LAYOUTS
+ * Wrappers.............Wrapping elements Prefix with -l.
+ *
+ * MODULES
+ * Elements..............Buttons, lists, category...
+ *
+ * STATES
+ * States of elements.................is-hidden, is-disabled...
+ *
+ * THEMES
+ * For mutiple themes.................dark, .light...
+ */
+
+/*------------------------------------*\
+  #TOOLS
+  Useful mixins.
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+  #NORMALIZE / RESET
+  Normalize.css, etc
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+  #BASE
+  H1–H6 styles, main, body...
+\*------------------------------------*/
+
+body{
+  background-color: #222;
+}
+
+h2{
+  color: white;
+}
+
+footer{
+  margin-top: 50px;
+  padding-bottom: 20px;
+  color: whitesmoke;
+  text-align: center;
+}
+
+
+/*------------------------------------*\
+  #LAYOUTS
+  Wrapping elements Prefix with -l.
+\*------------------------------------*/
+
+.l-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.badge{
+  margin-right: 5px;
+}
+
+.l-login{
+  display: flex;
+}
+
+.l-login .avatar{
+  width: 40px;
+  height: 40px;
+}
+
+.l-expenses-head{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 50px;
+}
+
+.l-expense-info{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.l-user-infos{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.l-expense-edit{
+  height: 0;
+  width: 0;
+
+  opacity: 0;
+  transition: ease 300ms;
+  overflow: hidden;
+}
+
+.l-expense-edit a:hover {
+  text-decoration: none;
+}
+
+.expense-item:hover .l-expense-edit{
+  height: auto;
+  width: auto;
+
+  opacity: 1;
+}
+
+/*------------------------------------*\
+  #MODULES
+  Buttons, lists, category...
+\*------------------------------------*/
+
+.logo{
+    width: 60px;
+}
+
+.catchline{
+  display: none;
+}
+
+.avatar{
+  width: 70px;
+  height: 70px;
+  margin-right: 15px;
+
+  background-color: #eee;
+
+  border-radius: 70px;
+}
+
+.user-info p{
+  margin-bottom: 0;
+}
+
+.username {
+  font-size: 1.25em;
+}
+
+.expense-item{
+  display: flex;
+  flex-direction: column;
+}
+
+.expense-item:hover{
+  background-color: #F8F9FA;
+}
+
+.expense-total{
+  background-color: #eee;
+}
+
+.expense-total:hover{
+  background-color: #eee;
+}
+
+.expense-amount{
+  margin-bottom: 0;
+  font-size: 1.25em;
+}
+
+.btn-edit-expense{
+  margin-left: 20px;
+}
+
+.btn-delete-expense{
+  margin-left: 10px;
+}
+
+/*------------------------------------*\
+  #STATES
+  .is-hidden, is-disabled...
+\*------------------------------------*/
+
+.cersei{
+  background: center / cover url("img/cersei.jpg");
+}
+
+.jaime{
+  background: center / cover url("img/jaime.jpeg");
+}
+
+.tywin{
+  background: center / cover url("img/tywin.jpg");
+}
+
+.tyrion{
+  background: center / cover url("img/tyrion.png");
+}
+
+
+/*------------------------------------*\
+  #THEMES
+  * For mutiple themes, .dark, .light...
+\*------------------------------------*/
+
+
+/*
+  * Extra small devices (portrait phones, less than 576px)
+  * No media query for `xs` since this is the default in Bootstrap
+*/
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+  .logo{
+    width: 80px;
+  }
+
+  .catchline{
+    display: inline-block;
+    font-size: 0.8em;
+  }
+
+  .l-header{
+    justify-content: space-between;
+  }
+
+  .btn-add-expense{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+  .expense-item{
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .l-user-infos{
+    margin-right: 35px;
+    margin-bottom: 0;
+  }
+
+  .l-expense-info{
+    margin-left: auto;
+  }
+
+  .l-expense-edit{
+    display: flex;
+  }
+
+  .expense-name{
+    padding-right: 15px;
+    margin-bottom: 0;
+  }
+  
+  .expense-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .expense-total p{
+    margin-bottom: 0;
+  }
+
+  .l-expenses-head{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}
