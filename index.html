@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Hello, world!</title>
   </head>
@@ -35,7 +35,7 @@
 
       <div class="l-expenses-head">
         <h2>Mes pots communs</h2>
-        <button class="btn btn-secondary btn-add-expense" data-toggle="modal" data-target="#modal-add-expense">Ajouter un pot commun</button>
+        <button class="btn btn-secondary btn-add-expense" data-toggle="modal" data-target="#modal-add-bucket">Ajouter un pot commun</button>
       </div>
 
       <ul class="list-group mt-3 mb-5">
@@ -140,7 +140,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="form-add-people">
           <div class="form-group">
             <div class="avatar mb-3"></div>
             <label for="exampleFormControlFile1">Avatar</label>
@@ -148,8 +148,8 @@
           </div>
 
           <div class="form-group">
-            <label for="exampleFormControlInput1">Pseudo</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tywin">
+            <label for="Pseudo">Pseudo</label>
+            <input type="text" class="form-control" id="Pseudo" name="Pseudo" placeholder="Tywin">
           </div>
 
           <div class="form-group">
@@ -162,11 +162,11 @@
             <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="06 25 65 45 12">
           </div>
           
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+            <button type="submit" class="btn btn-primary">Valider</button>
+          </div>
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-        <button type="button" class="btn btn-primary">Valider</button>
       </div>
     </div>
   </div>
@@ -208,16 +208,92 @@
               <option>Tyrion</option>
             </select>
           </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+            <button type="button" class="btn btn-primary">Valider</button>
+          </div>
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-        <button type="button" class="btn btn-primary">Valider</button>
       </div>
     </div>
   </div>
 </div>
 
+<!-- Modal Créer un pot commun -->
+<div class="modal fade" id="modal-add-bucket" tabindex="-1" role="dialog" aria-labelledby="modal-add-expense-title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal-add-expense-title">Ajouter un pot commun</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Nom du pot commun :</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Apéro chez jaime">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Montant du pot commun :</label>
+            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="152€">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Date de la dépense :</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="22/04/2020">
+          </div>
+
+          <label for="exampleFormControlSelect1">Participants :</label>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                    <span>Cersei</span>
+                  </div>
+                  <input type="number" class="form-control w-25 ml-auto" id="exampleFormControlInput1" placeholder="152€">
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                    <span>Jaime</span>
+                  </div>
+                  <input type="number" class="form-control w-25 ml-auto" id="exampleFormControlInput1" placeholder="152€">
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                    <span>Tywin</span>
+                  </div>
+                  <input type="number" class="form-control w-25 ml-auto" id="exampleFormControlInput1" placeholder="152€">
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                    <span>Tyrion</span>
+                  </div>
+                  <input type="number" class="form-control w-25 ml-auto" id="exampleFormControlInput1" placeholder="152€">
+                </div>
+              </li>
+            </ul>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+            <button type="button" class="btn btn-primary">Valider</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Modal Personnelle -->
 <div class="modal fade" id="modal-cersei" tabindex="-1" role="dialog" aria-labelledby="modal-add-people-title" aria-hidden="true">
@@ -472,6 +548,10 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/app.js"></script>
+    <script src="js/expense.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/person.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
