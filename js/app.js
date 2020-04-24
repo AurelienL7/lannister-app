@@ -1,3 +1,5 @@
+// Représente mon application dans son entièreté
+
 function Application() {
   /**
    * @var {Person[]}
@@ -7,6 +9,7 @@ function Application() {
   const expensesList = [];
 
   /**
+   * Fonction qui push le pseudo enregistré dans personsList[]
    * @returns {boolean} true if the name is successfully registered,
    *                    false is the name is aldreay taken
    */
