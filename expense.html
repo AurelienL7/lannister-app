@@ -172,10 +172,10 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="form-add-expense">
           <div class="form-group">
-            <label for="exampleFormControlSelect1">Auteur de la dépense</label>
-            <select class="form-control" id="exampleFormControlSelect1">
+            <label for="add-expense-user">Auteur de la dépense</label>
+            <select class="form-control" id="add-expense-user" name="add-expense-user">
               <option>Cersei</option>
               <option>Jaime</option>
               <option>Tywin</option>
@@ -184,19 +184,32 @@
           </div>
 
           <div class="form-group">
-            <label for="exampleFormControlInput1">Date de la dépense</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="22/04/2020">
+            <label for="add-expense-statut">Statut de ma dépense</label>
+            <select class="form-control" id="add-expense-statut" name="add-expense-statut">
+              <option>A participé</option>
+              <option>En attente</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="add-expense-label">Date de la dépense</label>
+            <input type="text" class="form-control" id="add-expense-date" name="add-expense-date" placeholder="22/04/2020">
           </div>
           
           <div class="form-group">
-            <label for="exampleFormControlTextarea1">Label de la dépense</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <label for="add-expense-label">Label de la dépense</label>
+            <textarea class="form-control" id="add-expense-label" name="add-expense-label" rows="3"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="add-expense-amount">Montant de la dépense</label>
+            <input type="number" class="form-control" id="add-expense-amount" name="add-expense-amount" placeholder="15€">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+            <button type="submit" class="btn btn-primary">Valider</button>
           </div>
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-        <button type="button" class="btn btn-primary">Valider</button>
       </div>
     </div>
   </div>
@@ -335,7 +348,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="form-add-people">
           <div class="form-group">
             <div class="avatar mb-3"></div>
             <label for="exampleFormControlFile1">Avatar</label>
@@ -343,8 +356,8 @@
           </div>
 
           <div class="form-group">
-            <label for="exampleFormControlInput1">Pseudo</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tywin">
+            <label for="Pseudo">Pseudo</label>
+            <input type="text" class="form-control" id="Pseudo" name="Pseudo" placeholder="Tywin">
           </div>
 
           <div class="form-group">
@@ -359,7 +372,7 @@
           
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-            <button type="button" class="btn btn-primary">Valider</button>
+            <button type="submit" class="btn btn-primary">Valider</button>
           </div>
         </form>
       </div>
