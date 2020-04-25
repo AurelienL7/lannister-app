@@ -34,27 +34,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Je stocke les données du formulaire
     const user = data.get("add-expense-user");
-    const statut = data.get("add-expense-statut");
     const date = data.get("add-expense-date");
     const label = data.get("add-expense-label");
     const amount = data.get("add-expense-amount");
 
-    console.log(user, statut, date, label);
+    
 
-    var $expensesList = document.querySelector(".list-group");
-
+    var $expensesList = document.querySelector(".list-group li:nth-last-child(2)");
     var $li = document.createElement("li");
     $li.setAttribute('class', 'list-group-item expense-item')
     $li.innerHTML = `
           <div class="l-user-infos">
-            <div class="avatar"></div>
+            <div class="avatar ${user.toLowerCase()}"></div>
             <div class="user-info">
               <p class="font-weight-bold text-dark username">${user}</p>
               <p class="expense-date text-muted font-weight-light">${date}</p>
             </div>
           </div>
 
-          <p class="expense-name"><span class="badge badge-pill badge-success">${statut}</span> Des bières empoisonnées pour l'apéro.</p>
+          <p class="expense-name">${label}</p>
           
           <div class="l-expense-info">
             <p class="expense-amount font-weight-bold text-danger">${amount}</p>
@@ -75,8 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
     `;
 
-    console.log($li)
-    $expensesList.appendChild($li);
+    $expensesList.after($li);
 
   });
 });
