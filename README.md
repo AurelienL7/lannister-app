@@ -1,3 +1,7 @@
+# TO DO
+- Passer le bouton "ajouter une dépense" en pastille en bas à droite de l'écran sur mobile
+- Trouver un meilleur système de navigation
+
 # Ca decount
 
 Application de partage de dépenses entre amis, codée en `javascript` (orienté "objet")

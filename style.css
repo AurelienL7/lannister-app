@@ -30,6 +30,21 @@
   Useful mixins.
 \*------------------------------------*/
 
+.cersei{
+  background: center / cover url("img/cersei.jpg");
+}
+
+.jaime{
+  background: center / cover url("img/jaime.jpeg");
+}
+
+.tywin{
+  background: center / cover url("img/tywin.jpg");
+}
+
+.tyrion{
+  background: center / cover url("img/tyrion.png");
+}
 
 /*------------------------------------*\
   #NORMALIZE / RESET
@@ -103,25 +118,7 @@ footer{
   margin-bottom: 20px;
 }
 
-.l-expense-edit{
-  height: 0;
-  width: 0;
 
-  opacity: 0;
-  transition: ease 300ms;
-  overflow: hidden;
-}
-
-.l-expense-edit a:hover {
-  text-decoration: none;
-}
-
-.expense-item:hover .l-expense-edit{
-  height: auto;
-  width: auto;
-
-  opacity: 1;
-}
 
 /*------------------------------------*\
   #MODULES
@@ -129,11 +126,13 @@ footer{
 \*------------------------------------*/
 
 .logo{
-    width: 60px;
+    height: 40px;
+    width: auto;
 }
 
 .catchline{
   display: none;
+  margin-bottom: 0;
 }
 
 .avatar{
@@ -189,21 +188,7 @@ footer{
   .is-hidden, is-disabled...
 \*------------------------------------*/
 
-.cersei{
-  background: center / cover url("img/cersei.jpg");
-}
 
-.jaime{
-  background: center / cover url("img/jaime.jpeg");
-}
-
-.tywin{
-  background: center / cover url("img/tywin.jpg");
-}
-
-.tyrion{
-  background: center / cover url("img/tyrion.png");
-}
 
 
 /*------------------------------------*\
@@ -226,7 +211,7 @@ footer{
 @media (min-width: 768px) {
 
   .logo{
-    width: 80px;
+    height: 60px;
   }
 
   .catchline{
@@ -242,6 +227,29 @@ footer{
     position: absolute;
     bottom: 0;
     right: 0;
+  }
+
+  .l-expense-edit{
+    height: 0;
+    width: 0;
+    position: relative;
+    right: -30px;
+  
+    opacity: 0;
+    transition: ease 300ms;
+    overflow: hidden;
+  }
+  
+  .l-expense-edit a:hover {
+    text-decoration: none;
+  }
+  
+  .expense-item:hover .l-expense-edit{
+    height: auto;
+    width: auto;
+    right: 0;
+  
+    opacity: 1;
   }
 }
 
